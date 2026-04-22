@@ -19,7 +19,7 @@ export default function Hero() {
       />
 
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 md:py-28 lg:py-32">
-        <div className="max-w-2xl">
+        <div className="max-w-2xl mx-auto text-center">
           {/* Section label */}
           <p className="text-[#c8102e] text-xs font-semibold uppercase tracking-[0.2em] mb-4">
             What We Do
@@ -31,7 +31,7 @@ export default function Hero() {
           </h1>
 
           {/* Subtitle */}
-          <p className="text-gray-300 text-[15px] sm:text-base leading-relaxed mb-8 max-w-xl">
+          <p className="text-gray-300 text-[15px] sm:text-base leading-relaxed mb-8 max-w-xl mx-auto">
             Our comprehensive range of programs and resources is designed to enhance skills, broaden knowledge, and propel careers forward in today&apos;s ever-evolving landscape.
           </p>
 

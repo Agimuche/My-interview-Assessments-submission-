@@ -1,77 +1,76 @@
 import Link from "next/link";
-import FeatureCard from "./FeatureCard";
 
 const consultantFeatures = [
   {
-    icon: "🎓",
     title: "Expert-Led Learning",
-    description:
-      "Learn from seasoned professionals in the field as they mentor you through the subtleties of business analysis.",
+    description: "Gain insight from seasoned professionals in the field as they mentor you through the subtleties of business analysis.",
   },
   {
-    icon: "🛠️",
     title: "Interactive Workshops",
-    description:
-      "Engage in hands-on workshops designed to enhance your analytical skills and strategic thinking.",
+    description: "Engage in hands-on workshops designed to enhance your training capabilities and provide practical insights.",
   },
   {
-    icon: "📋",
     title: "Comprehensive Curriculum",
-    description:
-      "Our curriculum covers fundamental principles and advanced methodologies, creating a thorough understanding.",
+    description: "Access a robust curriculum that covers fundamental principles and advanced methodologies, ensuring a well-rounded understanding.",
   },
   {
-    icon: "🌍",
     title: "Global Recognition",
-    description:
-      "Earn globally recognized certification, opening doors to new career opportunities and industry recognition.",
+    description: "You will attain a globally recognized certification, opening doors to new career opportunities and industry recognition.",
   },
 ];
 
 export default function ConsultantTraining() {
   return (
     <section
-      className="bg-[#f9f5ff] py-16 md:py-20"
+      className="bg-[#f9f3f7] flex justify-center w-full py-16 lg:py-20"
       aria-labelledby="consultant-heading"
     >
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Header */}
-        <div className="mb-10">
+      <div className="w-full lg:max-w-[1440px] px-5 lg:px-[64px] flex flex-col mx-auto gap-12 lg:gap-[48px]">
+
+        {/* Header Block */}
+        <div className="flex flex-col gap-5 max-w-4xl">
           <h2
             id="consultant-heading"
-            className="text-[#1a0a2e] text-[26px] sm:text-[30px] lg:text-[32px] font-bold leading-tight mb-3"
+            className="text-[#571244] text-[32px] lg:text-[48px] font-bold leading-tight"
           >
             Training The Consultant
           </h2>
-          <p className="text-[#c8102e] text-xs font-semibold uppercase tracking-[0.2em] mb-4">
-            Maximise Your Potential as a Certified Trainer
+          <p className="text-[#571244] text-[18px] lg:text-[22px] font-semibold italic">
+            Maximise Your Potential as a Certified Trainer:
           </p>
-          <p className="text-gray-600 text-[14px] sm:text-[15px] leading-relaxed max-w-3xl">
-            With the help of our Training Consultant program, take a revolutionary step toward becoming a distinguished certified training consultant. Learn from experienced consultants in the field in our intensive, practical training environment. Gain in-depth knowledge of our program with ample opportunities to practice, mentor, and develop strategy to mentor others in your chosen subfield.
+          <p className="text-gray-700 text-[15px] lg:text-[17px] leading-relaxed">
+            With the help of our Training Consultants program, take a revolutionary step toward becoming a distinguished certified training consultant. Learn from professionals in the field, immerse yourself in a thorough curriculum, and hone your training methods through interactive workshops.
           </p>
         </div>
 
         {/* Feature Cards Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-10">
-          {consultantFeatures.map((card) => (
-            <FeatureCard
-              key={card.title}
-              icon={card.icon}
-              title={card.title}
-              description={card.description}
-            />
-          ))}
+        <div className="bg-[#571244] rounded-[24px] p-8 lg:p-16 w-full shadow-2xl border border-white/5">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-x-20 lg:gap-y-12">
+            {consultantFeatures.map((card) => (
+              <div key={card.title} className="flex flex-col gap-4">
+                <h3 className="text-white text-[20px] lg:text-[24px] font-bold flex items-center gap-3">
+                  <span className="w-2 h-2 rounded-full bg-[#EF4353]" />
+                  {card.title}
+                </h3>
+                <p className="text-gray-300 text-[15px] lg:text-[16px] leading-relaxed">
+                  {card.description}
+                </p>
+              </div>
+            ))}
+          </div>
         </div>
 
-        {/* CTA */}
-        <div>
-          <Link
-            href="#"
-            className="inline-flex items-center gap-1 bg-[#c8102e] text-white text-sm font-semibold px-6 py-3 rounded hover:bg-[#a00d24] transition-colors focus:outline-none focus:ring-2 focus:ring-[#c8102e] focus:ring-offset-2"
-          >
-            Learn More <span aria-hidden="true">→</span>
-          </Link>
-        </div>
+        {/* CTA Button */}
+        <Link
+          href="#"
+          className="inline-flex items-center justify-center bg-[#571244] text-white text-[15px] font-bold rounded-[4px] px-10 py-4 w-fit hover:bg-[#430e34] transition-colors gap-2"
+        >
+          Learn More
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2.5} stroke="currentColor" className="w-4 h-4">
+            <path strokeLinecap="round" strokeLinejoin="round" d="M4.5 19.5l15-15m0 0H8.25m11.25 0v11.25" />
+          </svg>
+        </Link>
+
       </div>
     </section>
   );

@@ -10,6 +10,11 @@ interface FeatureSectionProps {
   imageLeft?: boolean;
   bgColor?: string;
   showLearnMore?: boolean;
+  imageStyle?: React.CSSProperties;
+  sectionStyle?: React.CSSProperties;
+  textContentStyle?: React.CSSProperties;
+  learnMoreStyle?: React.CSSProperties;
+  gridGap?: string;
 }
 
 export default function FeatureSection({
@@ -21,9 +26,14 @@ export default function FeatureSection({
   imageLeft = false,
   bgColor = "bg-white",
   showLearnMore = true,
+  imageStyle,
+  sectionStyle,
+  textContentStyle,
+  learnMoreStyle,
+  gridGap = "80px",
 }: FeatureSectionProps) {
   const textContent = (
-    <div className="flex flex-col justify-center">
+    <div className="flex flex-col justify-center" style={textContentStyle}>
       <h2 className="text-[#1a0a2e] text-[26px] sm:text-[30px] lg:text-[32px] font-bold leading-tight mb-4">
         {title}
       </h2>
@@ -48,10 +58,11 @@ export default function FeatureSection({
       {showLearnMore && (
         <Link
           href="#"
-          className="inline-flex items-center gap-1 text-[#c8102e] text-sm font-semibold hover:gap-2 transition-all focus:outline-none focus:ring-2 focus:ring-[#c8102e] focus:ring-offset-1 rounded w-fit"
+          className="inline-flex items-center justify-center text-[#c8102e] text-sm font-semibold hover:opacity-80 transition-all focus:outline-none focus:ring-2 focus:ring-[#c8102e] focus:ring-offset-1 rounded"
+          style={learnMoreStyle}
         >
           Learn More
-          <span aria-hidden="true">→</span>
+          <span aria-hidden="true" className="ml-2">→</span>
         </Link>
       )}
     </div>
@@ -59,22 +70,30 @@ export default function FeatureSection({
 
   const imageContent = (
     <div className="flex items-center justify-center">
-      <div className="relative w-full max-w-[480px] aspect-[4/3] rounded-xl overflow-hidden shadow-lg">
+      <div
+        className="relative overflow-hidden shadow-lg"
+        style={imageStyle ?? { width: "100%", maxWidth: "480px", aspectRatio: "4/3", borderRadius: "12px" }}
+      >
         <Image
           src={imageSrc}
           alt={imageAlt}
           fill
           className="object-cover"
           sizes="(max-width: 768px) 100vw, 50vw"
+          unoptimized
         />
       </div>
     </div>
   );
 
   return (
-    <section className={`${bgColor} py-16 md:py-20`} aria-labelledby={`section-${title.replace(/\s+/g, "-").toLowerCase()}`}>
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-10 lg:gap-16 items-center">
+    <section 
+      className={`${bgColor} flex justify-center w-full`} 
+      style={sectionStyle}
+      aria-labelledby={`section-${title.replace(/\s+/g, "-").toLowerCase()}`}
+    >
+      <div className="w-full max-w-[1440px] px-4 sm:px-[64px] py-12 md:py-[48px]">
+        <div className="grid grid-cols-1 md:grid-cols-2 items-center" style={{ gap: gridGap }}>
           {imageLeft ? (
             <>
               {imageContent}

@@ -49,22 +49,15 @@ export default function Navbar() {
           <div className="hidden lg:flex items-center gap-4">
             <Link
               href="#"
-              className="inline-flex items-center h-[48px] bg-[#571244] text-white px-5 rounded-[4px] hover:bg-[#430e34] transition-colors focus:outline-none"
-              style={{
-                fontFamily: "'Nunito Sans', sans-serif",
-                fontWeight: 600,
-                fontSize: "18px",
-                lineHeight: "150%",
-                textAlign: "center",
-              }}
+              className="inline-flex items-center h-[48px] bg-[#571244] text-white px-5 rounded-[4px] hover:bg-[#430e34] transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-[#EF4353] focus-visible:ring-offset-2 font-nunito-sans font-semibold text-[18px] leading-[150%] text-center gap-[2.67px]"
             >
-              <div className="w-[32px] h-[32px] rounded-full bg-[#d6b7c9] text-[#571244] flex items-center justify-center mr-3">
+              <div className="w-[32px] h-[32px] rounded-[16px] bg-[#DDD0DA] text-[#571244] flex items-center justify-center opacity-100 rotate-0">
                 <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
                   <path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/>
                 </svg>
               </div>
               Account
-              <div className="ml-3">
+              <div className="flex items-center">
                 <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                   <path d="m6 9 6 6 6-6"/>
                 </svg>
@@ -72,28 +65,15 @@ export default function Navbar() {
             </Link>
             <Link
               href="#"
-              className="inline-flex items-center justify-center min-w-[200px] h-[48px] bg-[#EF4353] text-white px-6 rounded-[4px] hover:bg-[#d43b49] transition-colors focus:outline-none"
-              style={{
-                fontFamily: "'Nunito Sans', sans-serif",
-                fontWeight: 600,
-                fontSize: "18px",
-                lineHeight: "150%",
-                textAlign: "center",
-              }}
+              className="inline-flex items-center justify-center min-w-[200px] h-[48px] bg-[#EF4353] text-white px-6 rounded-[4px] hover:bg-[#d43b49] transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-[#571244] focus-visible:ring-offset-2 font-nunito-sans font-semibold text-[18px] leading-[150%] text-center"
             >
               Take Assessment
             </Link>
           </div>
-
           {/* Mobile Right Icons */}
           <div className="flex lg:hidden items-center gap-3">
-            <div className="w-8 h-8 rounded-full bg-[#d6b7c9] text-[#571244] flex items-center justify-center">
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
-                <path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/>
-              </svg>
-            </div>
             <button
-              className="flex flex-col justify-center items-center w-8 h-8 gap-[5px] focus:outline-none"
+              className="flex flex-col justify-center items-center w-8 h-8 gap-[5px] focus:outline-none focus-visible:ring-2 focus-visible:ring-[#EF4353] rounded-sm transition-all"
               onClick={() => setMenuOpen(!menuOpen)}
               aria-label="Toggle mobile menu"
               aria-expanded={menuOpen}
@@ -112,22 +92,15 @@ export default function Navbar() {
       {/* Bottom Section: Nav Links */}
       <div className="hidden lg:block w-full bg-white">
         <div 
-          className="w-full lg:max-w-[1440px] flex items-center justify-between mx-auto px-[64px]"
-          style={{ height: "69px", paddingTop: "20px", paddingBottom: "20px" }}
+          className="w-full lg:max-w-[1440px] flex items-center justify-between mx-auto px-[64px] h-[69px] py-[20px]"
         >
           {navLinks.map((link) => (
             <Link
               key={link.label}
               href={link.href}
-              className={`relative flex items-center transition-colors group ${link.active ? "text-[#571244]" : "text-[#151515]"}`}
-              style={{
-                fontFamily: "'Nunito Sans', sans-serif",
-                fontWeight: 400,
-                fontSize: "18px",
-                lineHeight: "150%",
-              }}
+              className={`relative flex items-center transition-colors group font-nunito-sans font-normal text-[18px] leading-[150%] text-center hover:text-[#571244] focus:outline-none focus-visible:ring-2 focus-visible:ring-[#EF4353] ${link.active ? "text-[#571244]" : "text-[#151515]"}`}
             >
-              <span className="hover:text-[#571244] flex items-center">
+              <span className="flex items-center">
                 {link.label}
                 {link.hasDropdown && <ChevronDown />}
               </span>
@@ -147,13 +120,7 @@ export default function Navbar() {
               <Link
                 key={link.label}
                 href={link.href}
-                className={`py-3 px-2 flex items-center justify-between border-b border-gray-50 transition-colors ${link.active ? "text-[#571244]" : "text-[#151515]"}`}
-                style={{
-                  fontFamily: "'Nunito Sans', sans-serif",
-                  fontWeight: 400,
-                  fontSize: "18px",
-                  lineHeight: "150%",
-                }}
+                className={`py-3 px-2 flex items-center justify-between border-b border-gray-50 transition-colors font-nunito-sans font-normal text-[18px] leading-[150%] text-center hover:text-[#571244] focus:outline-none focus-visible:ring-2 focus-visible:ring-[#EF4353] ${link.active ? "text-[#571244]" : "text-[#151515]"}`}
                 onClick={() => setMenuOpen(false)}
               >
                 {link.label}
@@ -163,26 +130,14 @@ export default function Navbar() {
             <div className="flex flex-col gap-3 pt-5">
               <Link
                 href="#"
-                className="bg-[#571244] text-white py-4 rounded-[4px] flex items-center justify-center"
-                style={{
-                  fontFamily: "'Nunito Sans', sans-serif",
-                  fontWeight: 600,
-                  fontSize: "18px",
-                  lineHeight: "150%",
-                }}
+                className="bg-[#571244] text-white py-4 rounded-[4px] flex items-center justify-center font-nunito-sans font-semibold text-[18px] leading-[150%]"
                 onClick={() => setMenuOpen(false)}
               >
                 Account
               </Link>
               <Link
                 href="#"
-                className="bg-[#EF4353] text-white py-4 rounded-[4px] text-center"
-                style={{
-                  fontFamily: "'Nunito Sans', sans-serif",
-                  fontWeight: 600,
-                  fontSize: "18px",
-                  lineHeight: "150%",
-                }}
+                className="bg-[#EF4353] text-white py-4 rounded-[4px] text-center font-nunito-sans font-semibold text-[18px] leading-[150%]"
                 onClick={() => setMenuOpen(false)}
               >
                 Take Assessment

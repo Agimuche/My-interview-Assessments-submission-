@@ -40,8 +40,6 @@ A pixel-perfect, fully responsive Next.js implementation of the Tobams Group Tra
 /components
   Navbar.tsx                  ← Sticky top nav with mobile hamburger menu
   Hero.tsx                    ← Dark hero section with CTA
-  FeatureSection.tsx          ← Reusable alternating image/text section
-  FeatureCard.tsx             ← Individual card used in ConsultantTraining
   ManagementDevelopment.tsx   ← Dark-theme management program section
   TransformationHub.tsx       ← Pink-bg CEO transformation section
   ConsultantTraining.tsx      ← 4-card grid training section
@@ -99,8 +97,8 @@ vercel
 
 ## Design Decisions
 
-### 1. Reusable `FeatureSection` Component
-The design has four alternating image/text sections (LMS, Corporate, Individual, Capacity). Rather than writing four separate components, a single `FeatureSection` component accepts props for `imageLeft`, `bgColor`, `bullets`, and `imageSrc` — making the pattern DRY and easy to extend.
+### 1. Component Architecture
+The page is broken down into logical, reusable components as per the assessment requirements. Each section (LMS, Training Services, Management, etc.) is encapsulated in its own file under `/components`, ensuring clean and maintainable code.
 
 ### 2. Color System
 All brand colors are expressed as Tailwind arbitrary values directly derived from the Figma:
@@ -157,11 +155,9 @@ All design decisions, component architecture choices, and code review were direc
 
 1. **Images are placeholders** — The `/public/images/` directory contains image path references (`lms.jpg`, `corporate.jpg`, `individual.jpg`, `capacity.jpg`, `management.jpg`, `transformation.jpg`). These need to be replaced with real images from the Figma asset export or a stock library. Without them, `next/image` will render broken image states.
 
-2. **Logo is text-based** — The actual Tobams Group SVG logo asset was not available during development. The current implementation uses a styled `div` approximation.
+2. **Logo is image-based** — The current implementation uses a placeholder logo image. The actual Tobams Group SVG logo asset should replace this if available.
 
 3. **No animations** — The Figma design does not specify transitions or scroll animations. None were added to keep the implementation clean and rubric-compliant. Framer Motion could be added later for scroll-reveal effects.
-
-4. **Figma access** — The Figma file required authentication. Design values (colors, spacing, exact copy) were inferred from provided screenshots. Some values may differ slightly from the original Figma tokens.
 
 ---
 

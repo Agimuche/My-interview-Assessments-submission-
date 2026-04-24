@@ -1,9 +1,14 @@
 @import "tailwindcss";
+@theme {
+  --font-inter: var(--font-inter), ui-sans-serif, system-ui;
+  --font-nunito: var(--font-nunito), ui-sans-serif, system-ui;
+  --font-nunito-sans: var(--font-nunito-sans), ui-sans-serif, system-ui;
+}
 
 html {
   scroll-behavior: smooth;
 }
 
 body {
-  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  font-family: var(--font-inter), ui-sans-serif, system-ui;
 }

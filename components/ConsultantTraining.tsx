@@ -31,14 +31,14 @@ export default function ConsultantTraining() {
         <div className="flex flex-col gap-5 max-w-4xl">
           <h2
             id="consultant-heading"
-            className="text-[#571244] text-[32px] lg:text-[48px] font-bold leading-tight"
+            className="text-[#571244] text-[32px] lg:text-[48px] font-bold leading-tight font-nunito"
           >
             Training The Consultant
           </h2>
-          <p className="text-[#571244] text-[18px] lg:text-[22px] font-semibold italic">
+          <p className="text-[#571244] text-[18px] lg:text-[22px] font-semibold italic font-nunito-sans">
             Maximise Your Potential as a Certified Trainer:
           </p>
-          <p className="text-gray-700 text-[15px] lg:text-[17px] leading-relaxed">
+          <p className="text-gray-700 text-[15px] lg:text-[17px] leading-relaxed font-nunito-sans">
             With the help of our Training Consultants program, take a revolutionary step toward becoming a distinguished certified training consultant. Learn from professionals in the field, immerse yourself in a thorough curriculum, and hone your training methods through interactive workshops.
           </p>
         </div>
@@ -48,11 +48,11 @@ export default function ConsultantTraining() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-x-20 lg:gap-y-12">
             {consultantFeatures.map((card) => (
               <div key={card.title} className="flex flex-col gap-4">
-                <h3 className="text-white text-[20px] lg:text-[24px] font-bold flex items-center gap-3">
+                <h3 className="text-white text-[20px] lg:text-[24px] font-bold flex items-center gap-3 font-nunito">
                   <span className="w-2 h-2 rounded-full bg-[#EF4353]" />
                   {card.title}
                 </h3>
-                <p className="text-gray-300 text-[15px] lg:text-[16px] leading-relaxed">
+                <p className="text-gray-300 text-[15px] lg:text-[16px] leading-relaxed font-nunito-sans">
                   {card.description}
                 </p>
               </div>
@@ -63,7 +63,7 @@ export default function ConsultantTraining() {
         {/* CTA Button */}
         <Link
           href="#"
-          className="inline-flex items-center justify-center bg-[#571244] text-white text-[15px] font-bold rounded-[4px] px-10 py-4 w-fit hover:bg-[#430e34] transition-colors gap-2"
+          className="inline-flex items-center justify-center bg-[#571244] text-white text-[15px] font-bold rounded-[4px] px-10 py-4 w-fit hover:bg-[#430e34] transition-colors gap-2 font-nunito-sans"
         >
           Learn More
           <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2.5} stroke="currentColor" className="w-4 h-4">

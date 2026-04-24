@@ -12,11 +12,10 @@ export default function Home() {
   return (
     <main>
       <Hero />
-
+      <div className="h-6 lg:h-12 bg-white" />
       <LMSSection />
-
+      <div className="h-6 lg:h-12 bg-white" />
       <TrainingServices />
-
       <ManagementDevelopment />
       <TransformationHub />
       <ConsultantTraining />

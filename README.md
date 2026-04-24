@@ -6,7 +6,7 @@ A pixel-perfect, fully responsive Next.js implementation of the Tobams Group Tra
 
 ## Live Deployment URL
 
-> [https://tobams-assessment.vercel.app](https://tobams-assessment.vercel.app) ← _Replace with your Vercel deployment URL after deploying_
+> [https://tobams-assessment.vercel.app](https://my-interview-assessments-submission.vercel.app/) ← _Replace with your Vercel deployment URL after deploying_
 
 ---
 

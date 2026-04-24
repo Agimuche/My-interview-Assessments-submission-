@@ -18,6 +18,7 @@ export default function Home() {
       <TrainingServices />
       <ManagementDevelopment />
       <TransformationHub />
+      <div className="h-6 lg:h-12 bg-[#F8F9FA]" />
       <ConsultantTraining />
       <CTABanner />
       <Testimonials />

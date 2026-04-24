@@ -4,7 +4,7 @@ import Link from "next/link";
 export default function LMSSection() {
   return (
     <section className="flex justify-center w-full bg-[#5712441A] opacity-100 rotate-0" aria-label="Learning Management System">
-      <div className="w-full lg:max-w-[1440px] px-5 lg:px-[64px] py-12 lg:py-[48px] lg:min-h-[664px] lg:h-[700px] flex items-center mx-auto">
+      <div className="w-full lg:max-w-[1440px] px-[20px] py-12 lg:py-[48px] lg:min-h-[664px] lg:h-[700px] flex items-center mx-auto">
         <div className="flex flex-col lg:grid lg:grid-cols-2 w-full items-center gap-12 lg:gap-[80px]">
 
           {/* Mobile-only Header */}

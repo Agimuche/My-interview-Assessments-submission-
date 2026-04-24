@@ -30,7 +30,7 @@ export default function Navbar() {
     <nav className="w-full bg-white z-50 border-b border-[#DDD0DA] relative">
       {/* Top Section: Logo & Buttons */}
       <div className="w-full bg-white">
-        <div className="w-full lg:max-w-[1440px] flex items-center justify-between h-[72px] lg:h-[104px] mx-auto px-4 lg:px-[64px]">
+        <div className="w-full lg:max-w-[1440px] flex items-center justify-between h-[72px] lg:h-[104px] mx-auto px-[20px]">
           {/* Logo */}
           <Link href="/" className="flex items-center flex-shrink-0">
             <Image
@@ -38,7 +38,6 @@ export default function Navbar() {
               alt="Tobams Group Logo"
               width={166}
               height={64}
-              style={{ opacity: 1 }}
               className="w-[130px] lg:w-[166px] h-auto object-contain object-left"
               priority
               unoptimized
@@ -92,7 +91,7 @@ export default function Navbar() {
       {/* Bottom Section: Nav Links */}
       <div className="hidden lg:block w-full bg-white">
         <div 
-          className="w-full lg:max-w-[1440px] flex items-center justify-between mx-auto px-[64px] h-[69px] py-[20px]"
+          className="w-full lg:max-w-[1440px] flex items-center justify-between mx-auto px-[20px] h-[69px] py-[20px]"
         >
           {navLinks.map((link) => (
             <Link

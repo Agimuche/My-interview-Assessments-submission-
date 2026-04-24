@@ -13,7 +13,7 @@ export default function ManagementDevelopment() {
       className="bg-[#F8F9FA] flex justify-center w-full py-10 lg:py-20"
       aria-labelledby="management-heading"
     >
-      <div className="w-full lg:max-w-[1440px] px-5 lg:px-[64px] mx-auto flex justify-center">
+      <div className="w-full lg:max-w-[1440px] px-[20px] mx-auto flex justify-center">
         <div className="bg-[#2C0922] rounded-[20px] p-6 lg:p-[40px] w-full lg:w-[1312px] lg:h-[719px] border border-white/5 flex flex-col justify-center">
           <div className="flex flex-col lg:grid lg:grid-cols-2 items-center w-full gap-10 lg:gap-[100px]">
 

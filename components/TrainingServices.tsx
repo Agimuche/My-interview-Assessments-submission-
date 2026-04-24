@@ -12,7 +12,7 @@ export default function TrainingServices() {
 
   return (
     <section className="flex justify-center w-full bg-white opacity-100 rotate-0" aria-label="Training Services">
-      <div className="w-full lg:max-w-[1440px] lg:h-[1497px] px-5 lg:px-[64px] py-12 lg:py-[64px] flex flex-col justify-center mx-auto">
+      <div className="w-full lg:max-w-[1440px] lg:h-[1497px] px-[20px] py-12 lg:py-[64px] flex flex-col justify-center mx-auto">
         
         {/* Main Content Wrapper */}
         <div className="flex flex-col gap-16 lg:gap-[120px] rounded-[16px]">

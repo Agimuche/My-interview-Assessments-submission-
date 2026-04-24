@@ -22,37 +22,36 @@ const consultantFeatures = [
 export default function ConsultantTraining() {
   return (
     <section
-      className="bg-[#f9f3f7] flex justify-center w-full py-16 lg:py-20"
+      className="bg-[#5712441A] flex justify-center w-full py-[48px] lg:h-[642px]"
       aria-labelledby="consultant-heading"
     >
-      <div className="w-full lg:max-w-[1440px] px-5 lg:px-[64px] flex flex-col mx-auto gap-12 lg:gap-[48px]">
+      <div className="w-full lg:max-w-[1440px] px-[20px] flex flex-col mx-auto gap-[10px] justify-center">
 
         {/* Header Block */}
         <div className="flex flex-col gap-5 max-w-4xl">
           <h2
             id="consultant-heading"
-            className="text-[#571244] text-[32px] lg:text-[48px] font-bold leading-tight font-nunito"
+            className="text-[#571244] text-[32px] lg:text-[40px] font-semibold leading-[130%] font-nunito lg:w-[1312px] lg:h-[52px]"
           >
             Training The Consultant
           </h2>
-          <p className="text-[#571244] text-[18px] lg:text-[22px] font-semibold italic font-nunito-sans">
+          <p className="text-[#571244] text-[18px] font-semibold leading-[150%] font-nunito-sans lg:w-[1312px] lg:h-[27px]">
             Maximise Your Potential as a Certified Trainer:
           </p>
-          <p className="text-gray-700 text-[15px] lg:text-[17px] leading-relaxed font-nunito-sans">
-            With the help of our Training Consultants program, take a revolutionary step toward becoming a distinguished certified training consultant. Learn from professionals in the field, immerse yourself in a thorough curriculum, and hone your training methods through interactive workshops.
+          <p className="text-[#151515] text-[15px] lg:text-[18px] font-normal leading-[150%] font-nunito-sans lg:w-[1312px] lg:h-[81px]">
+            With the help of our Training Consultants program, take a revolutionary step toward becoming a distinguished certified training consultant. Learn from professionals in the field, immerse yourself in a thorough curriculum, and hone your training methods through interactive workshops. Participating in our program will enable you to gain expertise in diverse courses while also developing the abilities to mentor and encourage others in their career advancement.
           </p>
         </div>
 
-        {/* Feature Cards Grid */}
-        <div className="bg-[#571244] rounded-[24px] p-8 lg:p-16 w-full shadow-2xl border border-white/5">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-x-20 lg:gap-y-12">
+        {/* Feature Cards Grid Container */}
+        <div className="bg-[#571244] rounded-[8px] p-6 lg:p-[24px] w-full lg:w-[1312px] lg:h-[254px] border border-white/5 flex flex-col justify-center">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-x-[20px] gap-y-[12px]">
             {consultantFeatures.map((card) => (
-              <div key={card.title} className="flex flex-col gap-4">
-                <h3 className="text-white text-[20px] lg:text-[24px] font-bold flex items-center gap-3 font-nunito">
-                  <span className="w-2 h-2 rounded-full bg-[#EF4353]" />
+              <div key={card.title} className="flex flex-col gap-[12px] lg:w-[622px] lg:h-[93px]">
+                <h3 className="text-white text-[18px] font-bold leading-[150%] font-nunito-sans">
                   {card.title}
                 </h3>
-                <p className="text-gray-300 text-[15px] lg:text-[16px] leading-relaxed font-nunito-sans">
+                <p className="text-white text-[15px] lg:text-[18px] font-normal leading-[150%] font-nunito-sans lg:w-[622px] lg:h-[54px]">
                   {card.description}
                 </p>
               </div>
@@ -63,7 +62,7 @@ export default function ConsultantTraining() {
         {/* CTA Button */}
         <Link
           href="#"
-          className="inline-flex items-center justify-center bg-[#571244] text-white text-[15px] font-bold rounded-[4px] px-10 py-4 w-fit hover:bg-[#430e34] transition-colors gap-2 font-nunito-sans"
+          className="inline-flex items-center justify-center bg-[#571244] text-white text-[15px] font-bold rounded-[4px] px-[24px] py-[10.5px] lg:w-[173px] lg:h-[48px] hover:bg-[#430e34] transition-colors gap-[8px] font-nunito-sans"
         >
           Learn More
           <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2.5} stroke="currentColor" className="w-4 h-4">

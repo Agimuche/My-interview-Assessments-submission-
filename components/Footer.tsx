@@ -9,6 +9,8 @@ const whatWeDoLinks = [
   "IT Consulting Services",
   "Social Impact",
   "Talent Recruitment",
+  "Social Impact",
+  "Talent Recruitment",
 ];
 
 const companyLinks = [
@@ -36,32 +38,36 @@ const solutionLinks = [
 
 export default function Footer() {
   return (
-    <footer className="flex justify-center w-full bg-[#0a0208]" aria-label="Site footer">
-      <div className="w-full lg:max-w-[1440px] px-5 lg:px-[64px] py-16 lg:py-[80px] flex flex-col mx-auto gap-8 lg:gap-[60px]">
+    <footer className="flex justify-center w-full bg-[#11040E] lg:h-[806px]" aria-label="Site footer">
+      <div className="w-full lg:max-w-[1440px] px-[20px] py-8 lg:py-[32px] flex flex-col mx-auto gap-[20px] justify-between">
 
         {/* Top 4-Column Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-12">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-12 mt-8">
           {/* Column 1: Brand */}
           <div className="flex flex-col gap-6">
             <div className="flex items-center">
               <Image
                 src="/images/logo.png"
-                alt="Tobams Group Logo — innovative consultancy firm"
+                alt="Tobams Group Logo"
                 width={166}
                 height={64}
                 className="w-[166px] h-auto opacity-100 object-contain"
                 unoptimized
               />
             </div>
-            <p className="text-gray-400 text-[14px] leading-relaxed">
+            <p className="text-gray-400 text-[14px] leading-relaxed max-w-[320px]">
               Tobams Group is an innovative consultancy firm reshaping the future of tech talent development in Africa, specializing in talent acquisition, internships, and skill development with a global perspective.
             </p>
             <div className="flex gap-4">
-              {["linkedin", "instagram", "twitter"].map((social) => (
-                <div key={social} className="w-10 h-10 rounded-full bg-white/10 hover:bg-white/20 flex items-center justify-center transition-colors cursor-pointer">
-                  <span className="text-white font-bold text-xs capitalize">{social.slice(0, 2)}</span>
-                </div>
-              ))}
+              <Link href="#" className="flex items-center justify-center transition-opacity hover:opacity-80">
+                <Image src="/images/instagram.png" alt="Instagram" width={24} height={24} className="w-6 h-6 object-contain" unoptimized />
+              </Link>
+              <Link href="#" className="flex items-center justify-center transition-opacity hover:opacity-80">
+                <Image src="/images/socials.png" alt="LinkedIn" width={24} height={24} className="w-6 h-6 object-contain" unoptimized />
+              </Link>
+              <Link href="#" className="flex items-center justify-center transition-opacity hover:opacity-80">
+                <Image src="/images/Twitter.png" alt="Twitter" width={24} height={24} className="w-6 h-6 object-contain" unoptimized />
+              </Link>
             </div>
           </div>
 
@@ -108,66 +114,62 @@ export default function Footer() {
           </div>
         </div>
 
-        {/* Contact Section Group — Compact on Mobile */}
-        <div className="flex flex-col gap-4 lg:gap-0">
-          {/* Mobile Demarcation Line */}
-          <div className="lg:hidden border-t border-white/10 w-full mb-0" />
-
-          {/* Middle Card: Registered Offices & Contact Info */}
-          <div className="bg-[#1a0514] rounded-[24px] p-8 lg:p-12 grid grid-cols-1 lg:grid-cols-3 gap-10 lg:gap-16 border border-white/5 shadow-2xl">
-            {/* Contact Info — order 1 on mobile, order 2 on desktop */}
-            <div className="order-1 lg:order-2 flex flex-col gap-8 lg:border-l lg:border-white/10 lg:pl-12">
-              <h3 className="text-white text-[18px] lg:text-[22px] font-bold">Contact Information</h3>
-              <div className="flex flex-col gap-6">
-                <div className="flex items-center gap-4 group">
-                  <div className="w-10 h-10 rounded-full bg-[#EF4353]/10 flex items-center justify-center group-hover:bg-[#EF4353]/20 transition-colors">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="w-5 h-5 text-[#EF4353]">
-                      <path d="M1.5 8.67v8.58a3 3 0 003 3h15a3 3 0 003-3V8.67l-8.928 5.493a3 3 0 01-3.144 0L1.5 8.67z" />
-                      <path d="M22.5 6.908V6.75a3 3 0 00-3-3h-15a3 3 0 00-3 3v.158l9.714 5.978a1.5 1.5 0 001.572 0L22.5 6.908z" />
-                    </svg>
-                  </div>
-                  <a href="mailto:theteam@tobamsgroup.com" className="text-gray-300 text-[14px] lg:text-[15px] hover:text-[#EF4353] break-all transition-colors font-medium">
-                    theteam@tobamsgroup.com
-                  </a>
-                </div>
-                <div className="flex items-center gap-4 group">
-                  <div className="w-10 h-10 rounded-full bg-[#EF4353]/10 flex items-center justify-center group-hover:bg-[#EF4353]/20 transition-colors">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="w-5 h-5 text-[#EF4353]">
-                      <path fillRule="evenodd" d="M1.5 4.5a3 3 0 013-3h1.372c.86 0 1.61.586 1.819 1.42l1.105 4.423a1.875 1.875 0 01-.694 1.955l-1.293.97c-.135.101-.164.249-.126.352a11.285 11.285 0 006.697 6.697c.103.038.25.009.352-.126l.97-1.293a1.875 1.875 0 011.955-.694l4.423 1.105c.834.209 1.42.959 1.42 1.82V19.5a3 3 0 01-3 3h-2.25C8.552 22.5 1.5 15.448 1.5 6.75V4.5z" clipRule="evenodd" />
-                    </svg>
-                  </div>
-                  <a href="tel:+447886600748" className="text-gray-300 text-[14px] lg:text-[15px] hover:text-[#EF4353] transition-colors font-medium">
-                    +447886600748
-                  </a>
-                </div>
-              </div>
-            </div>
-
-            {/* Registered Offices — order 2 on mobile, order 1 on desktop */}
-            <div className="order-2 lg:order-1 lg:col-span-2 flex flex-col gap-8">
-              <h3 className="text-white text-[18px] lg:text-[22px] font-bold">Registered Offices</h3>
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-10">
-                <div className="flex flex-col gap-3">
-                  <p className="text-[#EF4353] text-[15px] font-bold uppercase tracking-widest">United Kingdom</p>
-                  <p className="text-gray-300 text-[14px] lg:text-[15px] leading-relaxed">
+        {/* Contact Section Group */}
+        <div className="flex flex-col gap-4">
+          <div className="bg-[#FFFFFF0F] rounded-[8px] p-[24px] lg:w-[1312px] lg:h-[181px] grid grid-cols-1 lg:grid-cols-3 gap-[24px] border border-white/5 mx-auto items-start">
+            {/* Registered Offices */}
+            <div className="lg:col-span-2 flex flex-col gap-6 h-full">
+              <h3 className="text-white text-[18px] lg:text-[20px] font-bold leading-none h-[20px]">Registered Offices</h3>
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-0">
+                <div className="flex flex-col gap-2 lg:pr-10">
+                  <p className="text-[#EF4353] text-[14px] font-bold uppercase tracking-widest leading-none">United Kingdom</p>
+                  <p className="text-gray-300 text-[14px] leading-relaxed">
                     07451196 (Registered by Company House)<br />
-                    Vine Cottages, 215 North Street, Romford, Essex, United Kingdom, RM1 4QA
+                    Vine Cottages, 215 North Street, Romford, Essex, RM1 4QA
                   </p>
                 </div>
-                <div className="flex flex-col gap-3">
-                  <p className="text-[#EF4353] text-[15px] font-bold uppercase tracking-widest">Nigeria</p>
-                  <p className="text-gray-300 text-[14px] lg:text-[15px] leading-relaxed">
+                <div className="flex flex-col gap-2 lg:border-l lg:border-white/10 lg:pl-10">
+                  <p className="text-[#EF4353] text-[14px] font-bold uppercase tracking-widest leading-none">Nigeria</p>
+                  <p className="text-gray-300 text-[14px] leading-relaxed">
                     RC 1048722 (Registered by the Corporate Affairs Commission)<br />
                     4, Muaz Close, Angwar-Rimi
                   </p>
                 </div>
               </div>
             </div>
+
+            {/* Contact Info */}
+            <div className="flex flex-col gap-6 lg:border-l lg:border-white/10 lg:pl-12 h-full">
+              <h3 className="text-white text-[18px] lg:text-[20px] font-bold leading-none h-[20px]">Contact Information</h3>
+              <div className="flex flex-col gap-4 lg:mt-[22px]">
+                <div className="flex items-center gap-4 group h-[21px]">
+                  <div className="flex items-center justify-center">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="w-5 h-5 text-[#EF4353]">
+                      <path d="M1.5 8.67v8.58a3 3 0 003 3h15a3 3 0 003-3V8.67l-8.928 5.493a3 3 0 01-3.144 0L1.5 8.67z" />
+                      <path d="M22.5 6.908V6.75a3 3 0 00-3-3h-15a3 3 0 00-3 3v.158l9.714 5.978a1.5 1.5 0 001.572 0L22.5 6.908z" />
+                    </svg>
+                  </div>
+                  <a href="mailto:theteam@tobamsgroup.com" className="text-gray-300 text-[14px] hover:text-[#EF4353] transition-colors font-medium">
+                    theteam@tobamsgroup.com
+                  </a>
+                </div>
+                <div className="flex items-center gap-4 group h-[21px]">
+                  <div className="flex items-center justify-center">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="w-5 h-5 text-[#EF4353]">
+                      <path fillRule="evenodd" d="M1.5 4.5a3 3 0 013-3h1.372c.86 0 1.61.586 1.819 1.42l1.105 4.423a1.875 1.875 0 01-.694 1.955l-1.293.97c-.135.101-.164.249-.126.352a11.285 11.285 0 006.697 6.697c.103.038.25.009.352-.126l.97-1.293a1.875 1.875 0 011.955-.694l4.423 1.105c.834.209 1.42.959 1.42 1.82V19.5a3 3 0 01-3 3h-2.25C8.552 22.5 1.5 15.448 1.5 6.75V4.5z" clipRule="evenodd" />
+                    </svg>
+                  </div>
+                  <a href="tel:+447886600748" className="text-gray-300 text-[14px] hover:text-[#EF4353] transition-colors font-medium">
+                    +447886600748
+                  </a>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
 
-        {/* Bottom Bar — Legal links on top, Copyright at bottom on mobile */}
-        <div className="border-t border-white/10 pt-10 pb-4 flex flex-col sm:flex-row items-center justify-between gap-6">
+        {/* Bottom Bar */}
+        <div className="border-t border-white/10 pt-8 pb-4 flex flex-col sm:flex-row items-center justify-between gap-6">
           <div className="flex flex-wrap justify-center gap-8 order-1 sm:order-2">
             {["Terms and Conditions", "Privacy Policy", "Cookies Policy"].map((legal) => (
               <Link key={legal} href="#" className="text-gray-500 text-[14px] hover:text-white transition-colors underline decoration-gray-700 underline-offset-8">
@@ -175,7 +177,7 @@ export default function Footer() {
               </Link>
             ))}
           </div>
-          <p className="text-gray-500 text-[14px] font-medium order-2 sm:order-1 text-center sm:text-left w-full sm:w-auto">
+          <p className="text-gray-500 text-[14px] font-medium order-2 sm:order-1 text-center sm:text-left">
             Copyright © Tobams Group, 2024. All rights reserved.
           </p>
         </div>

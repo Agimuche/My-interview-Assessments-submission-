@@ -20,9 +20,7 @@ export default function Hero() {
         <div className="absolute inset-0 bg-[#000000B2]" />
       </div>
 
-      <div
-        className="relative z-10 flex flex-col items-center justify-center w-full lg:max-w-[1440px] min-h-[500px] h-full px-5 lg:px-[64px] py-20 lg:py-[112px] text-center mx-auto"
-      >
+      <div className="relative z-10 w-full lg:max-w-[1440px] px-[20px] py-20 lg:py-[112px] flex items-center justify-center mx-auto">
         {/* Content */}
         <div className="flex flex-col items-center gap-8 lg:gap-[24px] w-full max-w-4xl">
           {/* Top Text Group */}
